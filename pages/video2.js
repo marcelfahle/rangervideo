@@ -4,15 +4,20 @@ import Layout from "./../components/layout.js";
 
 export default class App extends Component {
   componentDidMount() {
+    console.log("did mount");
+    if (player) {
+      console.log("destroy");
+      player.destroy();
+    }
     var conf = {
       key: "f390f0a3-592c-4f08-99b8-0291a111de86",
       style: {},
       source: {
         dash:
-          "https://dv80ex6osbfhg.cloudfront.net/slrmagic/625449_5181d994da34132bb8e1d3d0a3dac35c/625449.mpd",
+          "https://dv80ex6osbfhg.cloudfront.net/slrmagic/626513_8c5147117b3cc6e5c21282ab5788cd7d/626513.mpd",
         hls:
-          "https://dv80ex6osbfhg.cloudfront.net/slrmagic/625449_5181d994da34132bb8e1d3d0a3dac35c/625449.m3u8",
-        poster: "/static/poster1.png"
+          "https://dv80ex6osbfhg.cloudfront.net/slrmagic/626513_8c5147117b3cc6e5c21282ab5788cd7d/626513.m3u8",
+        poster: "/static/poster2.jpg"
       }
     };
     var player = bitmovin.player("player");
@@ -34,7 +39,7 @@ export default class App extends Component {
         <div className="video-wrapper">
           <div id="player" />
           <div id="info">
-            <h2>Video: Katharina geht in die SP Bestätigung</h2>
+            <h2>Video: Nepal High Quality</h2>
             <p>Diese Video-Demonstration bietet folgende Funktionen:</p>
             <ul>
               <li>
